@@ -1,0 +1,19 @@
+<div class="todo-item">
+    <div class="action done">
+        <i class="material-icons ch" [ngClass]="{'ch': true, 'material-icons': true, 'checked': IsDone(todo)}"   (click)="OnCheckButtonClicked(todo)">check</i>
+    </div>
+  
+    <div class="content">
+        <h4 [ngClass]="{'active':IsDone(todo)}">{{todo.task}}</h4>
+        <span></span>
+    </div>
+    <div class="right actions">
+        <div class="action create ">
+            <i class="material-icons c" (click)="OnEditButtonClicked(todo)" >create</i>
+        </div>
+        <div class="action delete">
+            <i class="material-icons cl" (click)="OnDeleteButtonClicked(todo)">clear</i>
+        </div>
+    </div>
+</div>
+<app-popup-root *ngIf="show"  (close)="OnAddClosed()"></app-popup-root>

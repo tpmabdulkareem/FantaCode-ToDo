@@ -1,0 +1,26 @@
+<div class="box">
+  <div class="container_modal">
+   <div class="todo_title">
+     <button class="cancel" (click)="OnCloseClicked()">
+       <i class="material-icons">clear</i>
+     </button>  
+   </div>
+   <form [formGroup]="todoForm" (submit)="OnFormSubmitted(todoForm.value)">
+     <div class="todo_head">
+     
+       <input type="text" [formControlName]="'Task'" placeholder="Task Title " class="titlebox">
+       <span *ngIf="todoForm.controls['Task'].hasError('required') && (todoForm.controls['Task'].dirty || todoForm.controls['Task'].touched)" class="errors">Task is Required.</span>
+     </div>
+     <div class="todo_desc">
+       <textarea class="descbox" [formControlName]="'Description'" placeholder="Task Description "></textarea>
+     </div>
+  <br>
+     <button class="submit" type="submit">Add
+     </button>
+   <br>
+   </form>
+   <div class="todo_footer">
+  
+   </div>
+  </div>
+  </div>

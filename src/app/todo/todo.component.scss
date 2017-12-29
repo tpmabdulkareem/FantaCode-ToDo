@@ -1,0 +1,42 @@
+.todo-item {
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    justify-content: space-between;
+    padding: 10px;
+    background: #ffffff;
+    font-family: Spinnaker;
+   margin-bottom: 10px;
+  
+    display: flex;
+    h4 { 
+        margin: 0;
+        color:#838383;
+    }
+  
+}
+.active{
+    color:red;
+text-decoration-color: #da1616;
+    text-decoration: line-through;
+}
+
+.checked {
+    color: green !important;
+}
+.create .c{color: #ffffff;}
+.actions {
+    display: flex;
+}
+.hoverclass{display:flex;
+    
+    }
+.todo-item:hover {
+    .create .c{
+        color:#838383;
+        cursor: pointer;
+    }
+cursor: pointer;
+}
+.delete .cl:hover{color:#da1616;  cursor: pointer;}
+.done .ch,.delete .cl{color: #dedede;}
+.done .ch:hover{color: #14c03f ; }
